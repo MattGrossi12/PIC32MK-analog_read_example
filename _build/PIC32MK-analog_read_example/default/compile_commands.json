@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/home/matheus/Documentos/PIC32MK-analog_read_example.X/_build/PIC32MK-analog_read_example/default",
+  "command": "/opt/microchip/xc32/v5.00/bin/xc32-gcc -DXPRJ_default=default -D__DEBUG -D__MPLAB_DEBUGGER_PKOB4=1 -I/home/matheus/Documentos/PIC32MK-analog_read_example.X/cmake/PIC32MK-analog_read_example/default/../../.. -x c -g -x c -c -mprocessor=32MK0128MCA048 -ffunction-sections -fdata-sections -O1 -fno-common -Werror -Wall -mdfp=/home/matheus/.mchp_packs/Microchip/PIC32MK-MC_DFP/1.12.263 -o CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/adc_lib.c.o -c /home/matheus/Documentos/PIC32MK-analog_read_example.X/src/adc_lib.c",
+  "file": "/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/adc_lib.c",
+  "output": "CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/adc_lib.c.o"
+},
+{
+  "directory": "/home/matheus/Documentos/PIC32MK-analog_read_example.X/_build/PIC32MK-analog_read_example/default",
+  "command": "/opt/microchip/xc32/v5.00/bin/xc32-gcc -DXPRJ_default=default -D__DEBUG -D__MPLAB_DEBUGGER_PKOB4=1 -I/home/matheus/Documentos/PIC32MK-analog_read_example.X/cmake/PIC32MK-analog_read_example/default/../../.. -x c -g -x c -c -mprocessor=32MK0128MCA048 -ffunction-sections -fdata-sections -O1 -fno-common -Werror -Wall -mdfp=/home/matheus/.mchp_packs/Microchip/PIC32MK-MC_DFP/1.12.263 -o CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/analog_read.c.o -c /home/matheus/Documentos/PIC32MK-analog_read_example.X/src/analog_read.c",
+  "file": "/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/analog_read.c",
+  "output": "CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/analog_read.c.o"
+},
+{
+  "directory": "/home/matheus/Documentos/PIC32MK-analog_read_example.X/_build/PIC32MK-analog_read_example/default",
+  "command": "/opt/microchip/xc32/v5.00/bin/xc32-gcc -DXPRJ_default=default -D__DEBUG -D__MPLAB_DEBUGGER_PKOB4=1 -I/home/matheus/Documentos/PIC32MK-analog_read_example.X/cmake/PIC32MK-analog_read_example/default/../../.. -x c -g -x c -c -mprocessor=32MK0128MCA048 -ffunction-sections -fdata-sections -O1 -fno-common -Werror -Wall -mdfp=/home/matheus/.mchp_packs/Microchip/PIC32MK-MC_DFP/1.12.263 -o CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/aux_func.c.o -c /home/matheus/Documentos/PIC32MK-analog_read_example.X/src/aux_func.c",
+  "file": "/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/aux_func.c",
+  "output": "CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/aux_func.c.o"
+},
+{
+  "directory": "/home/matheus/Documentos/PIC32MK-analog_read_example.X/_build/PIC32MK-analog_read_example/default",
+  "command": "/opt/microchip/xc32/v5.00/bin/xc32-gcc -DXPRJ_default=default -D__DEBUG -D__MPLAB_DEBUGGER_PKOB4=1 -I/home/matheus/Documentos/PIC32MK-analog_read_example.X/cmake/PIC32MK-analog_read_example/default/../../.. -x c -g -x c -c -mprocessor=32MK0128MCA048 -ffunction-sections -fdata-sections -O1 -fno-common -Werror -Wall -mdfp=/home/matheus/.mchp_packs/Microchip/PIC32MK-MC_DFP/1.12.263 -o CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/blink.c.o -c /home/matheus/Documentos/PIC32MK-analog_read_example.X/src/blink.c",
+  "file": "/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/blink.c",
+  "output": "CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/blink.c.o"
+},
+{
+  "directory": "/home/matheus/Documentos/PIC32MK-analog_read_example.X/_build/PIC32MK-analog_read_example/default",
+  "command": "/opt/microchip/xc32/v5.00/bin/xc32-gcc -DXPRJ_default=default -D__DEBUG -D__MPLAB_DEBUGGER_PKOB4=1 -I/home/matheus/Documentos/PIC32MK-analog_read_example.X/cmake/PIC32MK-analog_read_example/default/../../.. -x c -g -x c -c -mprocessor=32MK0128MCA048 -ffunction-sections -fdata-sections -O1 -fno-common -Werror -Wall -mdfp=/home/matheus/.mchp_packs/Microchip/PIC32MK-MC_DFP/1.12.263 -o CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/main.c.o -c /home/matheus/Documentos/PIC32MK-analog_read_example.X/src/main.c",
+  "file": "/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/main.c",
+  "output": "CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/main.c.o"
+},
+{
+  "directory": "/home/matheus/Documentos/PIC32MK-analog_read_example.X/_build/PIC32MK-analog_read_example/default",
+  "command": "/opt/microchip/xc32/v5.00/bin/xc32-gcc -DXPRJ_default=default -D__DEBUG -D__MPLAB_DEBUGGER_PKOB4=1 -I/home/matheus/Documentos/PIC32MK-analog_read_example.X/cmake/PIC32MK-analog_read_example/default/../../.. -x c -g -x c -c -mprocessor=32MK0128MCA048 -ffunction-sections -fdata-sections -O1 -fno-common -Werror -Wall -mdfp=/home/matheus/.mchp_packs/Microchip/PIC32MK-MC_DFP/1.12.263 -o CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/pin_declaration.c.o -c /home/matheus/Documentos/PIC32MK-analog_read_example.X/src/pin_declaration.c",
+  "file": "/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/pin_declaration.c",
+  "output": "CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/pin_declaration.c.o"
+},
+{
+  "directory": "/home/matheus/Documentos/PIC32MK-analog_read_example.X/_build/PIC32MK-analog_read_example/default",
+  "command": "/opt/microchip/xc32/v5.00/bin/xc32-gcc -DXPRJ_default=default -D__DEBUG -D__MPLAB_DEBUGGER_PKOB4=1 -I/home/matheus/Documentos/PIC32MK-analog_read_example.X/cmake/PIC32MK-analog_read_example/default/../../.. -x c -g -x c -c -mprocessor=32MK0128MCA048 -ffunction-sections -fdata-sections -O1 -fno-common -Werror -Wall -mdfp=/home/matheus/.mchp_packs/Microchip/PIC32MK-MC_DFP/1.12.263 -o CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/values.c.o -c /home/matheus/Documentos/PIC32MK-analog_read_example.X/src/values.c",
+  "file": "/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/values.c",
+  "output": "CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir/home/matheus/Documentos/PIC32MK-analog_read_example.X/src/values.c.o"
+}
+]

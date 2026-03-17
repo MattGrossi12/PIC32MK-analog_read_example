@@ -1,16 +1,13 @@
 #ifndef DEFS_H
 #define DEFS_H
 
-// Colocar config bits APENAS quando _CONFIG_BITS_SOURCE estiver definido
+/*
+ * Habilite _CONFIG_BITS_SOURCE em apenas UM arquivo .c
+ * antes de incluir este header, para emitir os config bits.
+ */
 #ifdef _CONFIG_BITS_SOURCE
 
 // PIC32MK0128MCA048 Configuration Bit Settings
-// 'C' source line config statements
-
-// OPERATION PARAMS:
-#define operation 1
-#define baudrate  115200
-#define SYSCLK_HZ   12000000UL
 
 // DEVCFG3
 #pragma config USERID   = 0xFFFF
@@ -47,7 +44,7 @@
 #pragma config DEBUG      = OFF
 #pragma config JTAGEN     = OFF
 #pragma config ICESEL     = ICS_PGx1
-#pragma config TRCEN      = ON
+#pragma config TRCEN      = OFF
 #pragma config BOOTISA    = MIPS32
 #pragma config FECCCON    = ECC_DECC_DISABLE_ECCON_WRITABLE
 #pragma config FSLEEP     = OFF
@@ -72,15 +69,49 @@
 
 #endif // _CONFIG_BITS_SOURCE
 
-// #pragma config statements should precede project file includes.
-// Use project enums instead of #define for ON and OFF.
-
 #include <xc.h>
+#include <sys/attribs.h>
+#include <stdint.h>
 
-//Inclusao de funcoes:
-void pins_init(void);
-void blink_led(void);
-void delay_ms(uint32_t ms);
+#define ADC_USED_CHANNEL        0u
+#define ADC_USED_LABEL          "AN0"
+#define ADC_REFERENCE_VOLTAGE   3.3f
+#define ADC_MAX_COUNTS          4095.0f
 
-#endif // DEFS_H
+/* Curva polinomial da distância em função da tensão do sensor:
+ * f(V) = 1.720473*V^3 + 4.15228*V^2 - 59.8489*V + 117.313
+ */
+#define DIST_POLY_A             1.720473f
+#define DIST_POLY_B             4.15228f
+#define DIST_POLY_C            -59.8489f
+#define DIST_POLY_D             117.313f
 
+/* Faixa válida de medição do sensor em centímetros. */
+#define DIST_MIN_VALID_CM       10.0f
+#define DIST_MAX_VALID_CM       80.0f
+
+/* Zonas de tensão para indicação por LED.
+ * Foi adicionada uma pequena banda morta entre as faixas para reduzir
+ * acionamentos espúrios por ruído próximo aos limiares.
+ */
+#define GREEN_VOLTAGE_MIN       0.95f
+#define GREEN_VOLTAGE_MAX       1.50f
+#define YELLOW_VOLTAGE_MIN      1.55f
+#define YELLOW_VOLTAGE_MAX      2.10f
+#define RED_VOLTAGE_MIN         2.15f
+#define RED_VOLTAGE_MAX         2.50f
+
+extern volatile uint16_t g_adc0_last_value;
+extern volatile uint32_t g_adc0_sample_count;
+extern volatile uint8_t g_adc0_new_sample;
+extern volatile float g_adc_voltage;
+extern volatile float g_distance_cm;
+extern volatile uint8_t g_voltage_zone;
+
+void init_OSC(void);
+void init_TMR2(void);
+void init_ADC(void);
+void analog_process_sample(void);
+void LEDs_ClearAll(void);
+
+#endif /* DEFS_H */

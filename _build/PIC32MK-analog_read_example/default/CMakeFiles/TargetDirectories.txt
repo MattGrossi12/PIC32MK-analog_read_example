@@ -1,0 +1,5 @@
+/home/matheus/Documentos/PIC32MK-analog_read_example.X/_build/PIC32MK-analog_read_example/default/CMakeFiles/PIC32MK_analog_read_example_default_default_XC32_compile.dir
+/home/matheus/Documentos/PIC32MK-analog_read_example.X/_build/PIC32MK-analog_read_example/default/CMakeFiles/PIC32MK_analog_read_example_default_image_PYkDLCb3.dir
+/home/matheus/Documentos/PIC32MK-analog_read_example.X/_build/PIC32MK-analog_read_example/default/CMakeFiles/PIC32MK_analog_read_example_default_Bin2Hex.dir
+/home/matheus/Documentos/PIC32MK-analog_read_example.X/_build/PIC32MK-analog_read_example/default/CMakeFiles/edit_cache.dir
+/home/matheus/Documentos/PIC32MK-analog_read_example.X/_build/PIC32MK-analog_read_example/default/CMakeFiles/rebuild_cache.dir

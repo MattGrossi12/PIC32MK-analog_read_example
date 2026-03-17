@@ -1,44 +1,45 @@
-/* 
- * File:   main.c
- * Author: Matheus Grossi
- * Created on 13 de Fevereiro de 2026, 14:11
- */
-
-// 1. DEFINA A MACRO AQUI para ativar os config bits do defs.h
-#define _CONFIG_BITS_SOURCE 
-
-// PIC LIBS:
-#include <xc.h>
-#include <stdint.h>
-#include <sys/attribs.h>
-
-// OURS LIBS:
+#define _CONFIG_BITS_SOURCE
 #include "defs.h"
-#include "pin_declaration.h"
-#include "aux_func.h"
-#include "blink.h"
+#include "pins.h"
 
-/*
-Anotacoes importantes:
-    Os pinos do Header1 reservados para a UART, sao:
+static void init_pins(void)
+{
+    /*
+     * AN0 no MCA048 está em RA0.
+     * RA1 fica reservado para o LED amarelo externo.
+     */
+    ANSELA = 0x0000;
+    ANSELB = 0x0000;
+    ANSELC = 0x0000;
+    ANSELD = 0x0000;
 
-    - RC0 -> RX
-    - RC1 -> TX
-*/
+    ANSELAbits.ANSA0 = 1;
+    TRISAbits.TRISA0 = 1;
 
-//=============================================================================
-// Funcao principal:
+    RLED_DIR = 0;
+    GLED_DIR = 0;
+    YLED_DIR = 0;
+    LEDs_ClearAll();
+}
+
 int main(void)
 {
-    // Inicializa pinos (antes de usar qualquer um deles)
-    pins_init();
+    init_pins();
+    init_OSC();
+    init_TMR2();
+    init_ADC();
 
-    // Chama o loop:
-    while (operation)
+    INTCONSET = _INTCON_MVEC_MASK;
+    __builtin_enable_interrupts();
+
+    while (1)
     {
-        blink_led();
+        if (g_adc0_new_sample != 0u)
+        {
+            g_adc0_new_sample = 0u;
+            analog_process_sample();
+        }
     }
 
-    // Opcional: nunca chega aqui
     return 0;
 }
