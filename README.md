@@ -15,10 +15,10 @@ Este projeto implementa uma aplicação embarcada para o **PIC32MK0128MCA048** q
 ![GP2Y0A02YK0F](https://raw.githubusercontent.com/MattGrossi12/PIC32MK-analog_read_example/main/images/sensor_model.png)
 
 <div align="left">
-- calcular a tensão equivalente na entrada do ADC;
-- estimar a distância em centímetros;
-- classificar a leitura em faixas de tensão;
-- acionar três LEDs de indicação conforme a região de operação configurada no firmware.
+- **calcular a tensão equivalente na entrada do ADC;**
+- **estimar a distância em centímetros;**
+- **classificar a leitura em faixas de tensão;**
+- **acionar três LEDs de indicação conforme a região de operação configurada no firmware.**
 
 <div align="justify">
    
