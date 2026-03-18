@@ -6,8 +6,12 @@
 
 ## Descrição
 
+<div align="justify">
+   
 Este projeto implementa uma aplicação embarcada para o **PIC32MK0128MCA048** que realiza a leitura do sensor analógico de distância **Sharp GP2Y0A02YK0F** por meio do canal **AN0** e utiliza o valor convertido para:
 
+<div align="center">
+   
 ![GP2Y0A02YK0F](https://raw.githubusercontent.com/MattGrossi12/PIC32MK-analog_read_example/main/images/sensor_model.png)
 
 - calcular a tensão equivalente na entrada do ADC;
@@ -15,11 +19,15 @@ Este projeto implementa uma aplicação embarcada para o **PIC32MK0128MCA048** q
 - classificar a leitura em faixas de tensão;
 - acionar três LEDs de indicação conforme a região de operação configurada no firmware.
 
+<div align="justify">
+   
 A aplicação foi organizada de forma modular, separando a configuração de periféricos, o tratamento de interrupções, a aquisição ADC, a lógica de saídas e a configuração de pinos.
 
 ---
 
 ## Sensor analógico utilizado
+
+<div align="justify">
 
 O dispositivo analógico em uso é o **Sharp GP2Y0A02YK0F**, um sensor de medição de distância por triangulação com **saída analógica**. Segundo o datasheet:
 
@@ -35,6 +43,8 @@ Também é recomendado pelo fabricante o uso de **capacitor de bypass de 10 µF 
 
 ## Objetivo funcional
 
+<div align="justify">
+   
 O firmware coleta amostras do canal analógico **AN0**, converte o valor digital em tensão e estima a distância a partir da curva polinomial atualmente implementada no código:
 
 $$
@@ -78,7 +88,9 @@ Como o firmware converte a leitura do ADC usando:
 
 - `ADC_REFERENCE_VOLTAGE = 3.3f`
 - `ADC_MAX_COUNTS = 4095.0f`
-
+- 
+<div align="justify">
+   
 A tensão medida em `AN0` é interpretada com referência de **3,3 V** e resolução de **12 bits**.
 
 Isso é compatível com a leitura do sinal analógico do sensor, desde que a interface elétrica entre o **VO** do GP2Y0A02YK0F e o pino do microcontrolador já tenha sido validada em hardware. A alimentação do sensor deve permanecer em **5 V**, conforme o datasheet.
@@ -217,6 +229,8 @@ Valores entre faixas ou fora desses limites também desligam todas as saídas.
 
 ### Comportamento do componente
 
+<div align="justify">
+   
 O gráfico característico do datasheet mostra que a relação entre **distância** e **tensão de saída** é claramente **não linear**. No gráfico do datasheet, a curva cresce até a região de aproximadamente **15 a 20 cm**, e o fabricante especifica a operação nominal a partir de **20 cm**. Portanto, leituras abaixo dessa faixa não devem ser tratadas como medição garantida pelo sensor. O datasheet define o sensor como um medidor analógico de **20 a 150 cm**.
 
 ### Tempo de atualização do sensor
